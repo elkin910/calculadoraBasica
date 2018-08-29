@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <meta charset="utf-8" content="content" name="name">
+            <title>
+                Calculadora Basica
+            </title>
+            <link href="css/style.css" rel="stylesheet">
+            </link>
+        </meta>
+        <script type="text/Javascript">
+        </script>
+    </head>
+    <body class="content">
+        <div class="principal">
+            <div class="headInputs">
+                <h1>
+                    Calculadora Basica:
+                </h1>
+                <input class="insup" id="inpSuperior" value="1"/>
+                <br/>
+                <input class="ininf" id="inpSuperior" value="1"/>
+                <br/>
+            </div>
+            <div>
+                <button onclick="" type="button">
+                    CE
+                </button>
+                <button onclick="" type="button">
+                    C
+                </button>
+                <button onclick="" type="button">
+                    *
+                </button>
+                <button onclick="" type="button">
+                    %
+                </button>
+            </div>
+            <div>
+                <button onclick="" type="button">
+                    7
+                </button>
+                <button onclick="" type="button">
+                    8
+                </button>
+                <button onclick="" type="button">
+                    9
+                </button>
+                <button onclick="" type="button">
+                    X
+                </button>
+            </div>
+            <div>
+                <button onclick="" type="button">
+                    4
+                </button>
+                <button onclick="" type="button">
+                    5
+                </button>
+                <button onclick="" type="button">
+                    6
+                </button>
+                <button onclick="" type="button">
+                    -
+                </button>
+            </div>
+            <div>
+                <button onclick="" type="button">
+                    1
+                </button>
+                <button onclick="" type="button">
+                    2
+                </button>
+                <button onclick="" type="button">
+                    3
+                </button>
+                <button onclick="" type="button">
+                    /
+                </button>
+            </div>
+        </div>
+    </body>
+</html>
+<script type="text/javascript">
+    function suma(var1, var2){
+                return var1+ var2;
+            }
+
+            function resta(var1, var2){
+                return var1 - var2;
+            }
+            function mult(var1, var2){
+                return var1 * var2;
+            }
+
+            function div(var1, var2){
+                if(var2 > 0){
+                    return var1 / var2;
+                }else{
+                    return "no puede dividir por 0";
+                }
+                
+            }
+
+    function calcular (){
+
+    var input1 = document.getElementById("nro1").value;
+    var input2 =  document.getElementById("nro2").value;
+    var selectlist = document.getElementById("selectOperation");
+    var strUser = selectlist.options[selectlist.selectedIndex].value;
+
+        var resultado = 0;
+        if (strUser==1){
+           resultado=suma(parseInt(input1), parseInt(input2));
+        }
+         if (strUser==2){
+           resultado=resta(parseInt(input1), parseInt(input2));
+        }
+        if (strUser==3){
+           resultado=mult(parseInt(input1), parseInt(input2));
+        }
+         if (strUser==4){
+           resultado=div(parseInt(input1), parseInt(input2));
+        }
+        
+         document.getElementById("resultado1").value = resultado;
+        
+
+    }
+
+
+
+            //alert("el valor en el input es "+input1.value);
+</script>
+<div class="clear">
+</div>

@@ -1,0 +1,170 @@
+<html>
+    <head>
+        <meta charset="utf-8" content="content" name="name">
+            <title>
+                Calculadora
+            </title>
+            <link href="css/style.css" rel="stylesheet">
+            </link>
+        </meta>
+        <script type="text/Javascript">
+            /*function suma(var1, var2){
+                return var1+ var2;
+            }
+
+            function resta(var1, var2){
+                return var1 - var2;
+            }
+            function mult(var1, var2){
+                return var1 * var2;
+            }
+
+            function div(var1, var2){
+                if(var2 > 0){
+                    return var1 / var2;
+                }else{
+                    return "no puede dividir por 0";
+                }
+                
+            }*/
+
+
+           /* var nro1 = 1;
+            var nro2=3;
+            //var suma= nro1+nro2;
+            //alert("la suma es "+suma);
+
+            var miarreglo = [1,2,3,4];
+
+            for (var i=0; i< miarreglo.length;i++){
+                console.log(" miarreglo  "+i+" es: "+miarreglo[i]);
+
+                if(i ==1){
+                    console.log("paso por i = 1");
+                }else if(i == 2){
+                    console.log("paso por i = 2");
+                }else{
+                    console.log("no es 1");
+                }
+
+                if (i % 2 == 0){
+                    //alert("modulo de "+i);
+                }
+            }
+
+
+            console.log("en consola la suma es "+suma);
+
+
+            var variable1= prompt("ingrese texto 1");
+            var variable2= prompt("ingrese texto 2");
+
+            alert("concatenando "+variable1+" + "+variable2);
+
+            var suma= suma(parseInt(variable1),parseInt(variable2));
+            console.log("la suma es "+suma);
+            var resta = resta(parseInt(variable1),parseInt(variable2));
+            console.log("la resta es "+resta);
+            var multi = mult(parseInt(variable1),parseInt(variable2));
+            console.log("la mult es "+multi);
+            var div = div(parseInt(variable1),parseInt(variable2));
+            console.log("la div es "+div);*/
+        </script>
+    </head>
+    <body class="content">
+        <div>
+            <label>
+                Nro1
+            </label>
+            <input id="nro1" value="1"/>
+            <br/>
+            <label>
+                Nro2
+            </label>
+            <input id="nro2" value="1"/>
+            <br/>
+        </div>
+    </body>
+</html>
+<br/>
+<label>
+    Seleccione Operación:
+</label>
+<select id="selectOperation">
+    <option value="1">
+        Suma
+    </option>
+    <option value="2">
+        Resta
+    </option>
+    <option value="3">
+        Multiplicacion
+    </option>
+    <option value="4">
+        División
+    </option>
+</select>
+<br/>
+<button onclick="calcular()" type="button">
+    Calcular
+</button>
+<br/>
+<br/>
+<br/>
+<label>
+    Resultado:
+</label>
+<input disabled="true" id="resultado1"/>
+<script type="text/javascript">
+    function suma(var1, var2){
+                return var1+ var2;
+            }
+
+            function resta(var1, var2){
+                return var1 - var2;
+            }
+            function mult(var1, var2){
+                return var1 * var2;
+            }
+
+            function div(var1, var2){
+                if(var2 > 0){
+                    return var1 / var2;
+                }else{
+                    return "no puede dividir por 0";
+                }
+                
+            }
+
+    function calcular (){
+
+    var input1 = document.getElementById("nro1").value;
+    var input2 =  document.getElementById("nro2").value;
+    var selectlist = document.getElementById("selectOperation");
+    var strUser = selectlist.options[selectlist.selectedIndex].value;
+
+        var resultado = 0;
+        if (strUser==1){
+           resultado=suma(parseInt(input1), parseInt(input2));
+        }
+         if (strUser==2){
+           resultado=resta(parseInt(input1), parseInt(input2));
+        }
+        if (strUser==3){
+           resultado=mult(parseInt(input1), parseInt(input2));
+        }
+         if (strUser==4){
+           resultado=div(parseInt(input1), parseInt(input2));
+        }
+        
+         document.getElementById("resultado1").value = resultado;
+        
+
+    }
+
+
+
+            //alert("el valor en el input es "+input1.value);
+</script>
+<div class="clear">
+</div>

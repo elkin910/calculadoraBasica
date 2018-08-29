@@ -1,0 +1,14 @@
+.insup {
+    background-color: black;
+    text-align: right;
+    color: white;
+}
+.ininf {
+    background-color: black;
+    text-align: right;
+    color: white;
+    font-size: 17px;
+}
+.headInputs {
+    width: 80%;
+}
